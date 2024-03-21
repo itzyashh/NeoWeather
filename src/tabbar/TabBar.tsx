@@ -4,16 +4,14 @@ import ArcComponent from './elements/ArcComponent'
 import useApplicationDimensions from '../hooks/useApplicationDimensions'
 
 const TabBar = () => {
-    const tabBarHeight = 88
-    const {width, height} = useApplicationDimensions()
+  const {height,width} = useApplicationDimensions()
   return (
-    <View style={{
-        height:tabBarHeight,
-        ...StyleSheet.absoluteFillObject,
-        top:height - tabBarHeight,
-        backgroundColor:'red'
-}}>
-        <ArcComponent height={tabBarHeight} width={width}/>
+    <View style={{ 
+      ...StyleSheet.absoluteFillObject,
+      top:height-88,
+      height: 88,
+    }}>
+      <ArcComponent height={88} width={width} />
     </View>
   )
 }
