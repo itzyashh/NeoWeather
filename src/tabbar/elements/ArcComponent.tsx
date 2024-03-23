@@ -1,5 +1,6 @@
 import React from 'react'
 import { Canvas, LinearGradient, Path, vec } from '@shopify/react-native-skia'
+import { StyleSheet } from 'react-native';
 
 interface ArcComponentProps {
     height: number
@@ -11,7 +12,7 @@ const ArcComponent: React.FC<ArcComponentProps> = ({ height, width }) => {
   const arcPath = `M 0 0 Q ${width / 2} ${height/2} ${width} 0 L ${width} ${height} L 0 ${height} Z`
   const arcBorder = `M 0 0 Q ${width / 2} ${height/2} ${width} 0`
   return (
-    <Canvas style={{ height }}>
+    <Canvas style={{ height ,...StyleSheet.absoluteFillObject}}>
       <Path
         path={arcPath}>
         <LinearGradient
